@@ -1,6 +1,4 @@
-Aqui está o **README.md** para o backend do jogo **Chaos Trials** sem o comando de commit:
 
-````markdown
 # Chaos Trials - Backend
 
 Bem-vindo ao repositório **Chaos Trials - Backend**, o coração que alimenta o emocionante RPG web! Este backend gerencia autenticação de usuários, desafios, progresso e muito mais. Ele é construído com tecnologias modernas para garantir que cada ação do jogador seja processada de forma rápida e segura.
@@ -31,7 +29,6 @@ Clone o repositório para a sua máquina local:
 git clone https://github.com/username/chaos-trials-backend.git
 cd chaos-trials-backend
 ```
-````
 
 ### 2. Instalar Dependências
 
