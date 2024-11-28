@@ -1,6 +1,4 @@
-Aqui está o **README.md** para o backend do jogo **Chaos Trials** sem o comando de commit:
 
-````markdown
 # Chaos Trials - Backend
 
 Bem-vindo ao repositório **Chaos Trials - Backend**, o coração que alimenta o emocionante RPG web! Este backend gerencia autenticação de usuários, desafios, progresso e muito mais. Ele é construído com tecnologias modernas para garantir que cada ação do jogador seja processada de forma rápida e segura.
@@ -31,17 +29,8 @@ Clone o repositório para a sua máquina local:
 git clone https://github.com/username/chaos-trials-backend.git
 cd chaos-trials-backend
 ```
-````
 
-### 2. Instalar Dependências
-
-Instale todas as dependências necessárias com o seguinte comando:
-
-```bash
-npm install
-```
-
-### 3. Configurar o `.env`
+### 2. Configurar o `.env`
 
 Crie um arquivo `.env` na raiz do projeto e adicione as variáveis de ambiente necessárias:
 
@@ -61,22 +50,18 @@ JWT_ISSUER=chaos_trials_app            # Nome da aplicação ou entidade que emi
 JWT_AUDIENCE=chaos_trials_users       # Nome da aplicação ou usuários que consomem o token
 
 # Porta do Servidor
-PORT=3000                           # Porta onde o servidor irá rodar. Padrão: 3000
-
-# (Opcional) Variáveis adicionais para desenvolvimento:
-# Caso esteja usando MongoDB, por exemplo:
-# MONGO_URI=mongodb://localhost:27017/chaos_trials_db
+PORT=8080                           # Porta onde o servidor irá rodar. Padrão: 3000
 ```
 
-### 4. Rodar o Servidor
+### 3. Rodar o Servidor
 
 Para iniciar o servidor em modo de desenvolvimento, use o comando:
 
 ```bash
-npm run dev
+mvn spring-boot:run
 ```
 
-O servidor estará disponível em `http://localhost:3000`.
+O servidor estará disponível em `http://localhost:8080` ou na porta escolhida.
 
 ## 🔧 Estrutura de Diretórios
 
