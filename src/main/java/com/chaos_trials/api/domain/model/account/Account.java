@@ -20,6 +20,10 @@ public class Account {
     @Column(name = "banned")
     private boolean ban;
 
+    public UUID getUuid() {
+        return uuid;
+    }
+
     public boolean isBan() {
         return ban;
     }
