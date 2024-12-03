@@ -37,7 +37,7 @@ public class DecryptInterceptor implements HandlerInterceptor {
         System.out.println("Entrou aq no interceptor");
         if(request.getRequestURI().startsWith("/auth/")) {
             if (encryptedData != null) {
-                String username = jwtUtils.getEmailFromToken(request);
+                String username = jwtUtils.getUsernameFromToken(request);
 
                 Optional<Account> accountOptional = accountRepository.findFirstByEmailOrUsername(username);
 
