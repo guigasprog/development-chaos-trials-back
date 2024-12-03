@@ -1,6 +1,8 @@
 package com.chaos_trials.api.application.usecase.register;
 
+import com.chaos_trials.api.application.dto.token_key.TokenKeyDTO;
 import com.chaos_trials.api.application.form.register.RegisterForm;
+import com.chaos_trials.api.application.usecase.key_generation.KeyGeneration;
 import com.chaos_trials.api.domain.model.account.Account;
 import com.chaos_trials.api.domain.repository.account.AccountRepository;
 import com.chaos_trials.api.util.jwt.JwtUtil;
@@ -20,15 +22,17 @@ public class RegisterUseCase {
 
     private final JwtUtil jwtUtil;
 
-    private final PasswordEncoder passwordEncoder;
+    private final KeyGeneration keyGeneration;
 
-    public RegisterUseCase(AccountRepository accountRepository, JwtUtil jwtUtil, PasswordEncoder passwordEncoder) {
+    public RegisterUseCase(AccountRepository accountRepository,
+                           JwtUtil jwtUtil,
+                           KeyGeneration keyGeneration) {
         this.accountRepository = accountRepository;
         this.jwtUtil = jwtUtil;
-        this.passwordEncoder = passwordEncoder;
+        this.keyGeneration = keyGeneration;
     }
 
-    public ResponseEntity<String> register(RegisterForm registerForm) {
+    public ResponseEntity<TokenKeyDTO> register(RegisterForm registerForm) throws Exception {
         Optional<Account> optionalAccount = accountRepository.findFirstByEmailOrUsername(
                 registerForm.getEmail(), registerForm.getUsername()
         );
@@ -38,8 +42,11 @@ public class RegisterUseCase {
 
             Account account = accountRepository.save(registerForm.convertFormForAccount());
 
+            TokenKeyDTO dto = new TokenKeyDTO(
+                    jwtUtil.generateToken(account.getEmail()),
+                    keyGeneration.generation(account.getUuid()));
             return ResponseEntity.status(HttpStatus.CREATED)
-                    .body(jwtUtil.generateToken(account.getEmail()));
+                    .body(dto);
         }
         return ResponseEntity.status(HttpStatus.FOUND).build();
     }
