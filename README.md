@@ -52,7 +52,7 @@ JWT_ISSUER=chaos_trials_app            # Nome da aplicação ou entidade que emi
 JWT_AUDIENCE=chaos_trials_users       # Nome da aplicação ou usuários que consomem o token
 
 # Porta do Servidor
-PORT=8080                           # Porta onde o servidor irá rodar. Padrão: 3000
+PORT=8080                           # Porta onde o servidor irá rodar. Padrão: 8080
 ```
 
 ### 3. Rodar o Servidor
