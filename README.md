@@ -15,11 +15,47 @@ Bem-vindo ao repositório **Chaos Trials - Backend**, o coração que alimenta o
 - **Dotenv**: Gerenciamento de variáveis de ambiente com a biblioteca **dotenv-java** para maior flexibilidade e segurança na configuração de dados sensíveis.  
 - **JUnit e Mockito**: Garantia de qualidade do código com testes unitários e de integração.  
 - **Jakarta Servlet API**: Suporte ao desenvolvimento de aplicativos Java que utilizam servlets.  
-- **Jackson**: Biblioteca para serialização e desserialização de objetos Java em formatos como JSON.  
+- **Jackson**: Biblioteca para serialização e desserialização de objetos Java em formatos como JSON.   
 
-## ⚙ Funcionalidades
+## **🎮 Funcionalidades do Backend**  
 
-O backend é responsável por uma série de funções essenciais para o jogo, como:
+O backend é responsável por uma série de funções essenciais para o jogo, como:  
+
+### **Gerenciamento de Jogadores**  
+- Registro de novos jogadores, incluindo validação de dados e criptografia de senhas.  
+- Autenticação e login utilizando JWT para sessões seguras.  
+- Recuperação e atualização de perfis de jogadores, incluindo estatísticas e configurações pessoais.  
+
+### **Gerenciamento de Partidas**  
+- Criação, listagem e acompanhamento de partidas em andamento.  
+- Matchmaking, conectando jogadores com habilidades similares.  
+- Salvamento de resultados e estatísticas das partidas.  
+
+### **Gestão de Recursos do Jogo**  
+- Controle e armazenamento de itens, habilidades e níveis dos jogadores.  
+- Criação e aplicação de regras de gameplay no backend.  
+
+### **Comunicação em Tempo Real**  
+- Integração com WebSockets ou outros protocolos para enviar atualizações em tempo real.  
+- Suporte a chats dentro do jogo, para comunicação entre jogadores.  
+
+### **Lógica de Negócios**  
+- Implementação de regras específicas do jogo, como sistema de pontuação e penalidades.  
+- Configuração de eventos ou missões com tempo limitado.  
+
+### **Segurança**  
+- Proteção contra acessos não autorizados usando Spring Security.  
+- Monitoramento de atividades suspeitas e prevenção contra trapaças (anti-cheat).  
+
+### **Gerenciamento de Logs e Estatísticas**  
+- Registro de logs detalhados para auditoria e depuração.  
+- Geração de relatórios sobre o desempenho do jogo e engajamento dos jogadores.  
+
+### **Administração**  
+- Painel de administração para gerenciar jogadores, partidas, e configurações do jogo.  
+- Ferramentas para monitorar e ajustar balanceamento de gameplay.  
+
+Essas funcionalidades garantem uma experiência de jogo fluida, segura e escalável para os usuários, enquanto oferecem flexibilidade para ajustes e melhorias contínuas.
 
 ## 🏁 Como Rodar o Backend
 
