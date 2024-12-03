@@ -72,15 +72,19 @@ A estrutura do projeto foi organizada para facilitar a manutenção e escalabili
 ```
 chaos-trials-backend/
 ├── src/
-│   ├── config/            # Arquivos de configuração do projeto (ex: banco de dados, autenticação)
-│   ├── domain/            # Modelos de dados (ex: Mongoose models, entidades de negócios)
-│   ├── entrypoint/        # Entradas da aplicação, como as rotas da API (controladores)
-│   ├── usecase/           # Casos de uso (lógica de negócios)
-│   ├── middleware/        # Middlewares (autenticação, validação, etc.)
-│   └── utils/             # Funções auxiliares (ex: helpers, validações comuns)
-├── .env                   # Variáveis de ambiente (configurações sensíveis)
-├── package.json           # Dependências e scripts do projeto
-└── README.md              # Este arquivo
+│   ├── application/ 
+│   │   ├── dto/                        # Objetos de transferência de dados
+│   │   ├── form/                       # Estruturas de formulário para entrada de dados
+│   │   └── usecase/                    # Lógica de casos de uso da aplicação
+│   ├── domain/    
+│   │   ├── model/                      # Modelos da aplicação
+│   │   └── repository/                 # Repositórios para acesso a dados
+│   ├── infrastructure/config/          # Configurações do projeto (banco de dados, autenticação, etc.)
+│   ├── util/                           # Funções auxiliares (helpers, validações comuns)
+│   └── web/controller/                 # Controladores (endpoints da API)
+├── .env                                # Variáveis de ambiente
+├── pom.xml                             # Configuração do Maven e dependências do projeto
+├── README.md                           # Documentação do projeto
 ```
 
 ## 🤝 Contribuindo
