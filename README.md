@@ -63,6 +63,8 @@ Para iniciar o servidor em modo de desenvolvimento, use o comando:
 mvn spring-boot:run
 ```
 
+Ou utilize alguma idea que possua o mvn para rodar, exemplo: Intellij
+
 O servidor estará disponível em `http://localhost:8080` ou na porta escolhida.
 
 ## 🔧 Estrutura de Diretórios
@@ -84,7 +86,7 @@ chaos-trials-backend/
 │   └── web/controller/                 # Controladores (endpoints da API)
 ├── .env                                # Variáveis de ambiente
 ├── pom.xml                             # Configuração do Maven e dependências do projeto
-├── README.md                           # Documentação do projeto
+└── README.md                           # Documentação do projeto
 ```
 
 ## 🤝 Contribuindo
