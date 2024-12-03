@@ -1,21 +1,18 @@
 package com.chaos_trials.api.web.controller.account;
 
+import com.chaos_trials.api.application.dto.token_key.TokenKeyDTO;
 import com.chaos_trials.api.application.form.login.LoginForm;
 import com.chaos_trials.api.application.form.register.RegisterForm;
 import com.chaos_trials.api.application.usecase.login.LoginUseCase;
 import com.chaos_trials.api.application.usecase.register.RegisterUseCase;
-import com.chaos_trials.api.domain.model.account.Account;
 import jakarta.validation.Valid;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
 public class AccountController {
+
 
     private final LoginUseCase loginUseCase;
 
@@ -28,13 +25,20 @@ public class AccountController {
     }
 
     @PostMapping("/login")
-    public ResponseEntity<String> login(@RequestBody @Valid LoginForm loginForm) {
+    public ResponseEntity<TokenKeyDTO> login(@RequestBody @Valid LoginForm loginForm) throws Exception {
         return loginUseCase.login(loginForm);
     }
 
     @PostMapping("/register")
-    public ResponseEntity<String> register(@RequestBody @Valid RegisterForm registerForm) {
+    public ResponseEntity<TokenKeyDTO> register(@RequestBody @Valid RegisterForm registerForm) throws Exception {
         return registerUseCase.register(registerForm);
     }
+
+    @GetMapping("/teste")
+    public ResponseEntity<String> teste() {
+        return ResponseEntity.ok("TESTEEEE");
+    }
+
+
 }
 
