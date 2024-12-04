@@ -131,9 +131,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
+			<groupId>org.web3j</groupId>
+			<artifactId>core</artifactId>
+			<version>4.8.7</version> <!-- Verifique a versão mais recente -->
 		</dependency>
+
 	</dependencies>
 
 	<build>
